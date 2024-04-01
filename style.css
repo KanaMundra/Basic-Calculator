@@ -107,3 +107,14 @@ a {
 a:hover{
     font-size: 110%;
 }
+.credit{
+    position: absolute;
+    margin-left: 80%;
+    margin-top: 50%;
+    margin-bottom: 20%;
+}
+
+.credit:hover{
+    cursor: pointer;
+    font-weight: 500;
+}
