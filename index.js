@@ -1,25 +1,26 @@
-const display = document.getElementById('display');
-let firstNumber = null;
-let operator = null;
-let secondNumber = null;
 
-function updateDisplay(value) {
-  display.innerText = value;
+const display = document.getElementById("display");
+
+function appendTodisplay(input){
+  display.value += input;
+
 }
 
+function clearDisplay(){
 
+  display.value = "";
 
+}
 
-function addNumber(number) {
-  if (secondNumber !== null) {
-    clearCalculator(); 
+function calculate(){
+  try{
+    display.value = eval(display.value);
+
+  }catch(err){
+
+    display.value = "Invalid Input";
+    alert("Galat Chize Mat dal Bhai😔!")
   }
-  updateDisplay(display.innerText + number);
-}
 
-function clearCalculator() {
-  firstNumber = null;
-  operator = null;
-  secondNumber = null;
-  updateDisplay("");
+ 
 }
